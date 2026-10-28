@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cloud-deploy-lab
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: APP_VERSION
+        value: 1.0.0
